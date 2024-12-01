@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class MakeupDetailTitle extends StatelessWidget {
   final int id;
   final String name;
-  const MakeupDetailTitle({super.key, required this.id, required this.name});
+  final String details;
+  final int price;
+  const MakeupDetailTitle({super.key, required this.id, required this.name, required this.details, required this.price});
 
   @override
   Widget build(BuildContext context) {

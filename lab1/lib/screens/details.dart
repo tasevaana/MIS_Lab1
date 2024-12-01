@@ -18,8 +18,8 @@ class Details extends StatelessWidget {
         child: Column(
           children: [
             MakeupDetailImage(image: arguments.img),
-            MakeupDetailTitle(id: arguments.id, name: arguments.name),
-            MakeupDetailData(id: arguments.id),
+            MakeupDetailTitle(id: arguments.id, name: arguments.name, details: arguments.details, price: arguments.price,),
+            MakeupDetailData(id: arguments.id, details: arguments.details, price: arguments.price,),
           ],
         ),
       ),

@@ -6,9 +6,9 @@ class MakeupGrid extends StatefulWidget {
   final List<Makeup> makeup;
   const MakeupGrid({super.key, required this.makeup});
   @override
-  _MangaGridState createState() => _MangaGridState();
+  _MakeupGridState createState() => _MakeupGridState();
 }
-class _MangaGridState extends State<MakeupGrid> {
+class _MakeupGridState extends State<MakeupGrid> {
   @override
   Widget build(BuildContext context) {
     //final width = MediaQuery.of(context).size.width;
@@ -20,8 +20,8 @@ class _MangaGridState extends State<MakeupGrid> {
       semanticChildCount: 250,
       childAspectRatio: 200 / 244,
       physics: const BouncingScrollPhysics(),
-      children: widget.makeup.map((manga) =>
-          MakeupCard(id: manga.id, name: manga.name, image: manga.img),
+      children: widget.makeup.map((makeup) =>
+          MakeupCard(id: makeup.id, name: makeup.name, image: makeup.img, details: makeup.details, price: makeup.price,),
       ).toList(),
     );
   }

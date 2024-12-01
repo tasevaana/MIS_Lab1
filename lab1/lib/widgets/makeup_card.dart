@@ -6,8 +6,10 @@ class MakeupCard extends StatelessWidget {
   final int id;
   final String name;
   final String image;
+  final String details;
+  final int price;
 
-  const MakeupCard({super.key, required this.id, required this.name, required this.image});
+  const MakeupCard({super.key, required this.id, required this.name, required this.image, required this.details, required this.price});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class MakeupCard extends StatelessWidget {
         enableFeedback: true,
         splashColor: Colors.red[50],
         onTap: () => {
-          Navigator.pushNamed(context, "/details", arguments: Makeup(id: id, name: name, img: image))
+          Navigator.pushNamed(context, "/details", arguments: Makeup(id: id, name: name, img: image, details: details, price: price))
         },
         child: Container(
           margin: const EdgeInsets.all(5.0),
